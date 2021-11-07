@@ -27,4 +27,6 @@ yarn-error.log*
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 /.idea/codeStyles/codeStyleConfig.xml
 /.idea/codeStyles/Project.xml
-react-app-env.d.ts
+src/react-app-env.d.ts
+src/reportWebVitals.ts
+src/setupTests.ts
