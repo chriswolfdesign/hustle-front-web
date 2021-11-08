@@ -12,7 +12,7 @@ be using ESLint and Prettier for this project. Before creating your pull request
 sure to run the following command to ensure that your code meets our expectations. Any contributions
 that do not follow the linting standards will not be merged.
 
-`npm lint`
+````$ npm lint````
 
 #### Unix users
 
