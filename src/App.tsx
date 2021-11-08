@@ -3,8 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App(): ReactElement {
-    console.log("This line is not formatted correctly");
-    console.log("Do you work now?");
+
     return (
         <div className="App">
             <header className="App-header">
