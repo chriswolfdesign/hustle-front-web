@@ -30,3 +30,4 @@ yarn-error.log*
 src/react-app-env.d.ts
 src/reportWebVitals.ts
 src/setupTests.ts
+.vscode/
