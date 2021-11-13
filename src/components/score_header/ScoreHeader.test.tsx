@@ -9,7 +9,7 @@ test("renders a default score header", () => {
 });
 
 test("renders a score header with a given title", () => {
-    render(<ScoreHeader title="My Composition" />)
-    const title = screen.getByText(/My Composition/i)
-    expect(title).toBeInTheDocument()
-})
+    render(<ScoreHeader title="My Composition" />);
+    const title = screen.getByText(/My Composition/i);
+    expect(title).toBeInTheDocument();
+});
