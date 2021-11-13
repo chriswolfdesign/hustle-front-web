@@ -5,13 +5,17 @@ import ScoreComposer from "../score_composer/ScoreComposer";
 
 interface ScoreHeaderProps {
     title?: string;
+    composer?: string;
 }
 
-function ScoreHeader({ title = "Untitled" }: ScoreHeaderProps): ReactElement {
+function ScoreHeader({
+    title = "Untitled",
+    composer = "Unknown",
+}: ScoreHeaderProps): ReactElement {
     return (
         <div className="ScoreHeader">
             <ScoreTitle title={title} />
-            <ScoreComposer />
+            <ScoreComposer composer={composer} />
         </div>
     );
 }

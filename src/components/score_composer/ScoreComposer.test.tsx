@@ -7,3 +7,9 @@ test("renders a default score composer", () => {
     const composer = screen.getByText(/Unknown/i);
     expect(composer).toBeInTheDocument();
 });
+
+test("Renders a ScoreComposer with a given composer name", () => {
+    render(<ScoreComposer composer="Wolf" />);
+    const composer = screen.getByText(/Wolf/i);
+    expect(composer).toBeInTheDocument();
+});
