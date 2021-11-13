@@ -6,3 +6,8 @@ test("Contains a ScoreTitle", () => {
     const { container } = render(<ScoreHeader />);
     expect(container.getElementsByClassName("ScoreTitle").length).toBe(1);
 });
+
+test("Contains a Score Composer", () => {
+    const { container } = render(<ScoreHeader />);
+    expect(container.getElementsByClassName("ScoreComposer").length).toBe(1);
+});
