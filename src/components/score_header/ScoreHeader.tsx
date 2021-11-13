@@ -1,8 +1,12 @@
 import React, { ReactElement } from "react";
 import "./ScoreHeader.css";
 
-function ScoreHeader(): ReactElement {
-    return <div className="ScoreHeader">Untitled</div>;
+interface ScoreHeaderProps {
+    title?: string;
+}
+
+function ScoreHeader({ title = "Untitled" }: ScoreHeaderProps): ReactElement {
+    return <div className="ScoreHeader">{title}</div>;
 }
 
 export default ScoreHeader;
