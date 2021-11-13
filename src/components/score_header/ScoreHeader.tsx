@@ -11,7 +11,7 @@ function ScoreHeader({ title = "Untitled" }: ScoreHeaderProps): ReactElement {
     return (
         <div className="ScoreHeader">
             <ScoreTitle title={title} />
-            <ScoreComposer />
+            <ScoreComposer composer="Wolf" />
         </div>
     );
 }
