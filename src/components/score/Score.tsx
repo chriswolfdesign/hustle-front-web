@@ -5,7 +5,7 @@ import ScoreHeader from "../score_header/ScoreHeader";
 function Score(): ReactElement {
     return (
         <div className="Score">
-            <ScoreHeader title="My Composition" />
+            <ScoreHeader title="My Composition" composer="Wolf" />
         </div>
     );
 }
