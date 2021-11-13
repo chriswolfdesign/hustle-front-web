@@ -1,7 +1,8 @@
 import React, { ReactElement } from "react";
+import "./ScoreComposer.css";
 
 function ScoreComposer(): ReactElement {
-    return <div>Unknown</div>;
+    return <div className="ScoreComposer">Unknown</div>;
 }
 
 export default ScoreComposer;
