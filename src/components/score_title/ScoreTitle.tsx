@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import "./ScoreTitle.css";
 
 interface ScoreTitleProps {
     title?: string;
