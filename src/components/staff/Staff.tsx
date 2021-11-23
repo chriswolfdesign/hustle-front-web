@@ -31,19 +31,54 @@ function drawStaffLines(
     width: number,
     line_thickness: number,
 ) {
-    // top line
+    drawTopStaffLine(ctx, width, line_thickness);
+    drawSecondFromTopStaffLine(ctx, height, width, line_thickness);
+    drawMiddleStaffLine(ctx, height, width, line_thickness);
+    drawSecondFromBottomStaffLine(ctx, height, width, line_thickness);
+    drawBottomStaffLine(ctx, height, width, line_thickness);
+}
+
+function drawTopStaffLine(
+    ctx: CanvasRenderingContext2D | null,
+    width: number,
+    line_thickness: number,
+) {
     ctx!.fillRect(0, 0, width, line_thickness);
+}
 
-    // second line from top
+function drawSecondFromTopStaffLine(
+    ctx: CanvasRenderingContext2D | null,
+    height: number,
+    width: number,
+    line_thickness: number,
+) {
     ctx!.fillRect(0, height * 0.25 - line_thickness / 2, width, line_thickness);
+}
 
-    // middle line
+function drawMiddleStaffLine(
+    ctx: CanvasRenderingContext2D | null,
+    height: number,
+    width: number,
+    line_thickness: number,
+) {
     ctx!.fillRect(0, height / 2 - line_thickness / 2, width, line_thickness);
+}
 
-    // second line from bottom
+function drawSecondFromBottomStaffLine(
+    ctx: CanvasRenderingContext2D | null,
+    height: number,
+    width: number,
+    line_thickness: number,
+) {
     ctx!.fillRect(0, height * 0.75 - line_thickness / 2, width, line_thickness);
+}
 
-    // bottom line
+function drawBottomStaffLine(
+    ctx: CanvasRenderingContext2D | null,
+    height: number,
+    width: number,
+    line_thickness: number,
+) {
     ctx!.fillRect(0, height - line_thickness, width, line_thickness);
 }
 
