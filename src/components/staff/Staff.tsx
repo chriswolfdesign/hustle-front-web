@@ -14,35 +14,7 @@ function Staff(): ReactElement {
             canvasCtxRef.current = canvasRef.current.getContext("2d");
             const ctx = canvasCtxRef.current;
 
-            // top line
-            ctx!.fillRect(0, 0, WIDTH, LINE_THICKNESS);
-
-            // second line from top
-            ctx!.fillRect(
-                0,
-                HEIGHT * 0.25 - LINE_THICKNESS / 2,
-                WIDTH,
-                LINE_THICKNESS,
-            );
-
-            // middle line
-            ctx!.fillRect(
-                0,
-                HEIGHT / 2 - LINE_THICKNESS / 2,
-                WIDTH,
-                LINE_THICKNESS,
-            );
-
-            // second line from bottom
-            ctx!.fillRect(
-                0,
-                HEIGHT * 0.75 - LINE_THICKNESS / 2,
-                WIDTH,
-                LINE_THICKNESS,
-            );
-
-            // bottom line
-            ctx!.fillRect(0, HEIGHT - LINE_THICKNESS, WIDTH, LINE_THICKNESS);
+            drawStaffLines(ctx, HEIGHT, WIDTH, LINE_THICKNESS);
         }
     }, []);
 
@@ -51,6 +23,28 @@ function Staff(): ReactElement {
             <canvas ref={canvasRef}></canvas>
         </div>
     );
+}
+
+function drawStaffLines(
+    ctx: CanvasRenderingContext2D | null,
+    height: number,
+    width: number,
+    line_thickness: number,
+) {
+    // top line
+    ctx!.fillRect(0, 0, width, line_thickness);
+
+    // second line from top
+    ctx!.fillRect(0, height * 0.25 - line_thickness / 2, width, line_thickness);
+
+    // middle line
+    ctx!.fillRect(0, height / 2 - line_thickness / 2, width, line_thickness);
+
+    // second line from bottom
+    ctx!.fillRect(0, height * 0.75 - line_thickness / 2, width, line_thickness);
+
+    // bottom line
+    ctx!.fillRect(0, height - line_thickness, width, line_thickness);
 }
 
 export default Staff;
