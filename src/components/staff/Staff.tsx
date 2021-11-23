@@ -13,7 +13,8 @@ function Staff(): ReactElement {
 
             canvasCtxRef.current = canvasRef.current.getContext("2d");
             const ctx = canvasCtxRef.current;
-            ctx!.fillRect(0, 0, canvasRef.current.width, LINE_THICKNESS);
+            ctx!.fillRect(0, 0, WIDTH, LINE_THICKNESS);
+            ctx!.fillRect(0, HEIGHT - LINE_THICKNESS, WIDTH, LINE_THICKNESS);
         }
     }, []);
 
