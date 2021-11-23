@@ -13,13 +13,35 @@ function Staff(): ReactElement {
 
             canvasCtxRef.current = canvasRef.current.getContext("2d");
             const ctx = canvasCtxRef.current;
+
+            // top line
             ctx!.fillRect(0, 0, WIDTH, LINE_THICKNESS);
+
+            // second line from top
+            ctx!.fillRect(
+                0,
+                HEIGHT * 0.25 - LINE_THICKNESS / 2,
+                WIDTH,
+                LINE_THICKNESS,
+            );
+
+            // middle line
             ctx!.fillRect(
                 0,
                 HEIGHT / 2 - LINE_THICKNESS / 2,
                 WIDTH,
                 LINE_THICKNESS,
             );
+
+            // second line from bottom
+            ctx!.fillRect(
+                0,
+                HEIGHT * 0.75 - LINE_THICKNESS / 2,
+                WIDTH,
+                LINE_THICKNESS,
+            );
+
+            // bottom line
             ctx!.fillRect(0, HEIGHT - LINE_THICKNESS, WIDTH, LINE_THICKNESS);
         }
     }, []);
