@@ -12,9 +12,12 @@ function Staff(): ReactElement {
             const LINE_THICKNESS = 3;
 
             canvasCtxRef.current = canvasRef.current.getContext("2d");
-            const ctx = canvasCtxRef.current;
 
-            drawStaffLines(ctx, HEIGHT, WIDTH, LINE_THICKNESS);
+            if (canvasCtxRef.current !== null) {
+                const ctx = canvasCtxRef.current;
+
+                drawStaffLines(ctx, HEIGHT, WIDTH, LINE_THICKNESS);
+            }
         }
     }, []);
 
@@ -43,7 +46,9 @@ function drawTopStaffLine(
     width: number,
     line_thickness: number,
 ) {
-    ctx!.fillRect(0, 0, width, line_thickness);
+    if (ctx !== null) {
+        ctx.fillRect(0, 0, width, line_thickness);
+    }
 }
 
 function drawSecondFromTopStaffLine(
@@ -52,7 +57,14 @@ function drawSecondFromTopStaffLine(
     width: number,
     line_thickness: number,
 ) {
-    ctx!.fillRect(0, height * 0.25 - line_thickness / 2, width, line_thickness);
+    if (ctx !== null) {
+        ctx.fillRect(
+            0,
+            height * 0.25 - line_thickness / 2,
+            width,
+            line_thickness,
+        );
+    }
 }
 
 function drawMiddleStaffLine(
@@ -61,7 +73,9 @@ function drawMiddleStaffLine(
     width: number,
     line_thickness: number,
 ) {
-    ctx!.fillRect(0, height / 2 - line_thickness / 2, width, line_thickness);
+    if (ctx !== null) {
+        ctx.fillRect(0, height / 2 - line_thickness / 2, width, line_thickness);
+    }
 }
 
 function drawSecondFromBottomStaffLine(
@@ -70,7 +84,14 @@ function drawSecondFromBottomStaffLine(
     width: number,
     line_thickness: number,
 ) {
-    ctx!.fillRect(0, height * 0.75 - line_thickness / 2, width, line_thickness);
+    if (ctx !== null) {
+        ctx.fillRect(
+            0,
+            height * 0.75 - line_thickness / 2,
+            width,
+            line_thickness,
+        );
+    }
 }
 
 function drawBottomStaffLine(
@@ -79,7 +100,9 @@ function drawBottomStaffLine(
     width: number,
     line_thickness: number,
 ) {
-    ctx!.fillRect(0, height - line_thickness, width, line_thickness);
+    if (ctx !== null) {
+        ctx.fillRect(0, height - line_thickness, width, line_thickness);
+    }
 }
 
 export default Staff;
