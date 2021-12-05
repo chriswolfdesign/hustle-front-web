@@ -7,9 +7,12 @@ function Staff(): ReactElement {
 
     useEffect(() => {
         if (canvasRef.current) {
-            const HEIGHT = canvasRef.current.height;
-            const WIDTH = canvasRef.current.width;
-            const LINE_THICKNESS = 3;
+            const HEIGHT = 100;
+            const WIDTH = window.innerWidth - 300;
+            const LINE_THICKNESS = 2;
+
+            canvasRef.current.height = HEIGHT;
+            canvasRef.current.width = WIDTH;
 
             canvasCtxRef.current = canvasRef.current.getContext("2d");
 
